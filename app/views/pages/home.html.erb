@@ -4,3 +4,21 @@
     <a class="btn btn-flat" href="#">Tous les coustumes</a>
   </div>
 </div>
+
+<div class="container">
+  <div class="cards">
+    <% @suits.each do |suit| %>
+      <div class="card-trip">
+        <img src=https://picsum.photos/200/200 />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= suit.name %></h2>
+            <p><%= suit.description %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= suit.price_per_day %>€</h2>
+          <%= image_tag("icon.jpg", class: "card-trip-user avatar-bordered") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
